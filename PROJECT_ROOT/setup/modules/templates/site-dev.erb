@@ -1,0 +1,29 @@
+<VirtualHost *:80>
+		ServerAdmin admin@site.com
+		ServerName site.com
+		ServerAlias www.site.com
+		DocumentRoot /site/media
+
+		WSGIDaemonProcess tdprod processes=3 threads=15 maximum-requests=1000 python-path=/site/lib/python2.6/site-packages
+		WSGIProcessGroup tdprod
+		WSGIScriptAlias / /site/conf/django-dev.wsgi
+		
+		Alias /media /home/site/prod
+		<Directory /home/site/prod>
+			SetHandler None
+			AddOutputFilterByType DEFLATE text/plain
+			AddOutputFilterByType DEFLATE text/xml
+			AddOutputFilterByType DEFLATE application/xhtml+xml
+			AddOutputFilterByType DEFLATE text/css
+			AddOutputFilterByType DEFLATE application/xml
+			AddOutputFilterByType DEFLATE image/svg+xml
+			AddOutputFilterByType DEFLATE application/rss+xml
+			AddOutputFilterByType DEFLATE application/atom_xml
+			AddOutputFilterByType DEFLATE application/x-javascript
+			AddOutputFilterByType DEFLATE application/x-httpd-php
+			AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+			AddOutputFilterByType DEFLATE application/x-httpd-eruby
+			AddOutputFilterByType DEFLATE text/html
+			FileETag INode MTime Size
+		</Directory>
+</VirtualHost>
