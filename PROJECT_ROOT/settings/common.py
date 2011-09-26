@@ -7,6 +7,12 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+SITE_ROOT = os.path.abspath(os.path.join(PROJECT_ROOT, '..'))
+sys.path.insert(0, SITE_ROOT)
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'lib'))
+
 MANAGERS = ADMINS
 
 DATABASES = {
