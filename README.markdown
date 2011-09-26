@@ -6,10 +6,10 @@ I've been working on my first django project. After many many many MANY file lay
 
 ## Installation
 cd into your development directory and clone my respority as so
-	git clone git://github.com/cmsimike/django-boilerplate-layout.git dev.<yourwebsitename>
+	git clone git://github.com/cmsimike/django-boilerplate-layout.git dev.example.com (change example to whatever your site name is).
 
-Delete the .git directory in dev.<yourwebsitename> and create your own git repo, if you'd like, and start coding. It is my hope that you can almost just start using this without much fuss.
+Delete the .git directory in dev.example.com; and create your own git repo, if you'd like, and start coding. It is my hope that you can almost just start using this without much fuss.
 
-This will clone this repository into a directory named dev.<yourwebsitename>. This is supposed to mimic your deployment. My idea is that webapps will reside in /home/<installation>.<yoursebsitename>/. That way you can have things like /home/dev.example.com, /home/staging.example.com and /home/example.com. 
+This will clone this repository into a directory named dev.example.com. This is supposed to mimic your deployment. My idea is that webapps will reside in /home/&lt;deployment&gt;.example.com/. That way you can have things like /home/dev.example.com, /home/staging.example.com and /home/example.com. 
 	
-Included in this project is a vagrant file to emulate a development enviornment.
+Included in this project is a Vagrantfile to emulate a development enviornment.
