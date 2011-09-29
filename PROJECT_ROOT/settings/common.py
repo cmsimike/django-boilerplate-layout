@@ -89,7 +89,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '+n+l(o9j3#%@!qag=s2e+xx6zv94btuny1caikat(#t()bs7@8'
+SECRET_KEY = 'YOU_NEED_YOUR_OWN_KEY'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -112,6 +112,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_ROOT, 'templates'),
 )
 
 INSTALLED_APPS = (
