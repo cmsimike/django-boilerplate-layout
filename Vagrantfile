@@ -28,7 +28,7 @@ Vagrant::Config.run do |config|
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
   # config.vm.share_folder "v-data", "/vagrant_data", "../data"
-  config.vm.share_folder "website-dev", "/home/dev.website/", "."
+  config.vm.share_folder "website-dev", "/home/dev.example.com/", "."
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
@@ -60,9 +60,9 @@ Vagrant::Config.run do |config|
     
 	Vagrant::Config.run do |config|
 	  config.vm.provision :puppet do |puppet|
-	    puppet.manifests_path = "twitdegree/setup/manifests"
+	    puppet.manifests_path = "PROJECT_ROOT/setup/manifests"
 	    puppet.manifest_file = "lucid32.pp"
-		puppet.module_path = "twitdegree/setup/modules"
+		puppet.module_path = "PROJECT_ROOT/setup/modules"
 		puppet.options = "--modulepath /tmp/vagrant-puppet/modules-0"# --verbose --debug"
 	  end
 	end

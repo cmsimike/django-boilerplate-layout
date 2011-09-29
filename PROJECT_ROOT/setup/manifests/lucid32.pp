@@ -73,7 +73,7 @@ file {
 	#	ensure => "/home/website/dev/conf/apache-django-dev",
 	#	require => Package["apache2-mpm-worker"];
 	"/etc/apache2/sites-enabled/001-website":
-		ensure => "/home/staging.website.com/conf/apache2-td-dev",
+		ensure => "/home/dev.example.com/PROJECT_ROOT/conf/dev.example.com.conf",
 		require => Package["apache2-mpm-worker"];
 	"/etc/apache2/sites-enabled/000-default":
 		ensure => absent,
